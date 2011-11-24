@@ -29,7 +29,7 @@ If you have questions concerning this license or the applicable additional terms
 #ifndef __MATH_MATH_H__
 #define __MATH_MATH_H__
 
-#ifdef MACOS_X
+#if defined(MACOS_X) && defined(__powerpc__)
 // for square root estimate instruction
 #include <ppc_intrinsics.h>
 // for FLT_MIN
