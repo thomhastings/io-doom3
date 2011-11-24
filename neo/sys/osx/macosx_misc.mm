@@ -25,7 +25,7 @@ If you have questions concerning this license or the applicable additional terms
 
 ===========================================================================
 */
-
+#include "GL/gl.h"  // use our GL headers to stop AppKit pulling in system ones.
 #define GL_GLEXT_LEGACY // AppKit.h include pulls in gl.h already
 #import <AppKit/AppKit.h>
 #import <Foundation/Foundation.h>

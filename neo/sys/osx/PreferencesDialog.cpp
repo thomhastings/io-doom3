@@ -26,6 +26,9 @@ If you have questions concerning this license or the applicable additional terms
 ===========================================================================
 */
 
+// !!! FIXME:
+void Sys_DoPreferences( void ) {}
+#if 0
 #include "../../idlib/precompiled.h"
 #include <Carbon/Carbon.h>
 #include "PreferencesDialog.h"
@@ -836,9 +839,5 @@ OSStatus RunGameDisplayPreferencesDialog(GameDisplayInfo *outGDInfo, WindowRef i
 	return prefInfo->okPressed ? noErr : userCanceledErr;
 }
 
-
-
-
-
-
+#endif
 

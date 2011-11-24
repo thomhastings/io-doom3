@@ -32,7 +32,7 @@ If you have questions concerning this license or the applicable additional terms
 // you need the OpenAL headers for build, even if AL is not enabled - http://www.openal.org/
 #include "../openal/include/al.h"
 #include "../openal/include/alc.h"
-#include "../openal/idal.h"
+// !!! FIXME: #include "../openal/idal.h"
 // broken OpenAL SDK ?
 #define ID_ALCHAR (ALubyte *)
 #include "../openal/include/efxlib.h"

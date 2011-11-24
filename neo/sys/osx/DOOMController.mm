@@ -43,7 +43,7 @@ If you have questions concerning this license or the applicable additional terms
 #import "macosx_sys.h"
 
 #import <fenv.h>
-#import <ucontext.h>
+//#import <ucontext.h>
 #import <mach/thread_status.h>
 
 #define	MAX_KEYS		256
@@ -837,7 +837,6 @@ main
 int main( int argc, const char *argv[] ) {
 	return NSApplicationMain( argc, argv );
 }
-
 
 #pragma mark -
 

@@ -113,6 +113,7 @@ void osxFreeMemory(void *pointer)
     vm_deallocate(mach_task_self(), (vm_address_t)ptr, size);
 }
 
+#if 0
 static inline void __eieio(void)
 {
 	__asm__ ("eieio");
@@ -166,3 +167,4 @@ void	Sys_FlushCacheMemory( void *base, int bytes ) {
         *(volatile unsigned long *)(base + i);
         __isync(); 
 }
+#endif
