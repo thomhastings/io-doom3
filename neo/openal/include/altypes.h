@@ -57,7 +57,9 @@ typedef double ALdouble;
 typedef unsigned int ALsizei;
 
 /** OpenAL void type */
-typedef void ALvoid;
+//@IODOOM3: "typedef void" doesn't work on gcc.
+//typedef void ALvoid;
+#define ALvoid void
 
 /** OpenAL enumerations. */
 typedef int ALenum;

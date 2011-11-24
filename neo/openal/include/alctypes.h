@@ -57,7 +57,9 @@ typedef double ALCdouble;
 typedef unsigned int ALCsizei;
 
 /** ALC void type */
-typedef void ALCvoid;
+//@IODOOM3: "typedef void" doesn't work on gcc.
+//typedef void ALCvoid;
+#define ALCvoid void
 
 /** ALC enumerations. */
 typedef int ALCenum;

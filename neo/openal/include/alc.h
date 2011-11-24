@@ -8,6 +8,11 @@
 extern "C" {
 #endif
 
+//@IODOOM3: This is needed on all platforms.
+typedef struct ALCdevice_struct ALCdevice;
+typedef struct ALCcontext_struct ALCcontext;
+//@IODOOM3: end additions.
+
 #ifdef _WIN32
  #ifdef _OPENAL32LIB
   #define ALCAPI __declspec(dllexport)
