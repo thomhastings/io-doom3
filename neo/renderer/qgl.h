@@ -32,44 +32,15 @@ If you have questions concerning this license or the applicable additional terms
 #ifndef __QGL_H__
 #define __QGL_H__
 
-#if defined( _WIN32 )
-
-#include <gl/gl.h>
-
-#elif defined( MACOS_X )
-
-// magic flag to keep tiger gl.h from loading glext.h
-#define GL_GLEXT_LEGACY
-#include <OpenGL/gl.h>
-
-#elif defined( __linux__ )
-
-// using our local glext.h
-// http://oss.sgi.com/projects/ogl-sample/ABI/
-#define GL_GLEXT_LEGACY
-#define GLX_GLXEXT_LEGACY
-#include <GL/gl.h>
-#include <GL/glx.h>
-
-#else
-
-#include <gl.h>
-
-#endif
+// use an internal copy on all platforms.
+#include "GL/gl.h"
+#include "GL/glext.h"
 
 #ifndef APIENTRY
 #define APIENTRY
 #endif
 #ifndef WINAPI
 #define WINAPI
-#endif
-
-// only use local glext.h if we are not using the system one already
-// http://oss.sgi.com/projects/ogl-sample/ABI/
-#ifndef GL_GLEXT_VERSION
-
-#include "glext.h"
-
 #endif
 
 typedef void (*GLExtension_t)(void);
